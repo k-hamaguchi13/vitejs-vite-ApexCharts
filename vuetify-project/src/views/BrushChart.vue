@@ -42,42 +42,29 @@ var options = {
 };
 
 var options2 = {
+  series: [{
+    data: data
+  }],
   chart: {
     id: 'brushChart',
     width: 700,
-    height: 60,
-    type: 'area',
+    height: 200,
+    type: 'line',
     foreColor: "#ccc",
     brush: {
-      target: 'mainChart',
-      enabled: true
+      targets: ['mainChart'],
+      enabled: true,
     },
     selection: {
       enabled: true,
-      fill: {
-        color: "#fff",
-        opacity: 0.4
-      },
-      xaxis: {
-        min: new Date("27 Jul 2017 10:00:00").getTime(),
-        max: new Date("14 Aug 2017 10:00:00").getTime()
-      }
-    }
+    },
   },
   colors: ["#FF0080"],
-  series: [
-    {
-      data: data
-    }
-  ],
   stroke: {
     width: 2
   },
   grid: {
     borderColor: "#444"
-  },
-  markers: {
-    size: 0
   },
   xaxis: {
     type: "datetime",
@@ -92,11 +79,9 @@ var options2 = {
 
 onMounted(()=>{
   chart = new ApexCharts(document.getElementById('mainChart'), options);
-  //chart.render();
-  chart.render().then(function() {
-    lineBar = new ApexCharts(document.getElementById('brushChart'), options2);
-    lineBar.render();  
-  });
+  lineBar = new ApexCharts(document.getElementById('brushChart'), options2);
+  chart.render();
+  lineBar.render();
 });
 
 function generateDayWiseTimeSeries(baseval, count, yrange) {
