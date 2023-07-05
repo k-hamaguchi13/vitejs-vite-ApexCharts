@@ -5,6 +5,7 @@ import MixChart from './MixChart.vue';
 import DashLineChart from './DashLineChart.vue';
 import BrushChart from './BrushChart.vue';
 import DashAndArea from './DashAndArea.vue';
+import Sample from './Sample.vue';
 
 // データセットの定義
 var series = [
@@ -79,6 +80,7 @@ onMounted( ()=>{
     <v-row>
       <v-col cols="6">
         <BrushChart />
+        <!-- <Sample /> -->
       </v-col>
     </v-row>
   </v-container>
