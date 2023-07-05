@@ -1,5 +1,5 @@
 <template>
-    <div id="charts">
+    <div id="charts" Hidden>
       <div id="chart1">
         <apexchart
           type="line"
@@ -8,7 +8,7 @@
           :series="series"
         />
       </div>
-      <div id="chart2">
+      <div id="chart2" Hidden>
         <apexchart
           type="area"
           height="130"

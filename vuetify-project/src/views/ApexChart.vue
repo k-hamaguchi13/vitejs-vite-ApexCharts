@@ -80,7 +80,7 @@ onMounted( ()=>{
     <v-row>
       <v-col cols="6">
         <BrushChart />
-        <!-- <Sample /> -->
+        <Sample />
       </v-col>
     </v-row>
   </v-container>
