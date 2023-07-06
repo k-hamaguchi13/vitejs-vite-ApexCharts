@@ -6,6 +6,9 @@ export interface navItem {
 export default {
   list: [
     {
+      name: '<熱需給管理>',
+    },
+    {
       name: '熱需要実績・予測',
       icon: 'mdi-finance',
       url: '#'
@@ -14,6 +17,9 @@ export default {
       name: '供給計画',
       icon: 'mdi-finance',
       url: '#'
+    },
+    {
+      name: '<各種設定>',
     },
     {
       name: '通知先メールアドレス',
