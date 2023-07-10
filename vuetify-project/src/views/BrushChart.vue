@@ -9,6 +9,10 @@ var data = generateDayWiseTimeSeries(new Date("22 Apr 2017").getTime(), 115, {
   min: 30,
   max: 90
 });
+var data2 = generateDayWiseTimeSeries(new Date("22 Apr 2017").getTime(), 115, {
+  min: 10,
+  max: 100
+});
 var options = {
   series: [{
     data: data
@@ -44,7 +48,11 @@ var options = {
 var options2 = {
   series: [{
     data: data
-  }],
+  },
+  {
+    data: data2
+  }
+  ],
   chart: {
     id: 'brushChart',
     width: 700,

@@ -25,14 +25,15 @@ var annotationOpts = {
         {
             x: new Date('2003-06-01').getTime(),
             borderColor: '#555',
+            width:'100%',
             label: {
-            borderColor: '#555',
-            style: {
-                color: "#fff",
-                background: "#555"
-            },
-            orientation: 'horizontal',
-            text: 'Today'
+              borderColor: '#555',
+              style: {
+                  color: "#fff",
+                  background: "#555"
+              },
+              orientation: 'horizontal',
+              text: 'Today'
             }
         }
     ]
