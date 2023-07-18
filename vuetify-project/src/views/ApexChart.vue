@@ -6,6 +6,7 @@ import DashLineChart from './DashLineChart.vue';
 import BrushChart from './BrushChart.vue';
 import DashAndArea from './DashAndArea.vue';
 import Sample from './Sample.vue';
+import Calnedar from './Calendar.vue';
 
 // データセットの定義
 var series = [
@@ -82,6 +83,9 @@ onMounted( ()=>{
         <BrushChart />
         <Sample />
       </v-col>
+    </v-row>
+    <v-row>
+      <Calnedar/>
     </v-row>
   </v-container>
 </template>
