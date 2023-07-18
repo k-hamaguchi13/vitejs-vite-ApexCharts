@@ -21,5 +21,5 @@ const app = createApp(App)
 registerPlugins(app)
 
 app.use(VueApexCharts);
-
+app.config.devtools = true;
 app.mount('#app')
