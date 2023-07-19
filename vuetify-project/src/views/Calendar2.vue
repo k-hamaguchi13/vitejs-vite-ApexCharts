@@ -10,7 +10,7 @@
         v-for="(date, dateIndex) in week"
         :key="dateIndex"
         class="calendar-cell"
-        :class="[getDateClass(date), { 'first-cell': dateIndex === 0 }, { 'last-cell': dateIndex === week.length - 1 }]"
+        :class="[{ 'first-cell': dateIndex === 0 }, { 'last-cell': dateIndex === week.length - 1 }]"
       >
         <div v-if="date">
           <div :class="getDateTextClass(date)">{{ date.getDate() }}</div>
@@ -73,24 +73,10 @@ export default {
         return "text-center header-cell"
       }
     },
-    getDateClass(date) {
-      if (!date) {
-        return '';
-      }
-      // if (date.getDay() === 0 || isJapaneseHoliday.isHoliday(date)) {
-      //   return 'red';
-      // } else if (date.getDay() === 6) {
-      //   return 'blue';
-      // }
-      return '';
-    },
     getDateTextClass(date) {
       if (!date) {
         return '';
       }
-      // if (date.getDay() === 0 || date.getDay() === 6) {
-      //   return 'colored-date';
-      // }
       if (date.getDay() === 0 || isJapaneseHoliday.isHoliday(date)) {
         return 'red';
       } else if (date.getDay() === 6) {
@@ -125,13 +111,8 @@ export default {
 }
 .red {
   color: red;
-  font-weight: bold;
 }
 .blue {
   color: blue;
-  font-weight: bold;
-}
-.colored-date {
-  font-weight: bold;
 }
 </style>
