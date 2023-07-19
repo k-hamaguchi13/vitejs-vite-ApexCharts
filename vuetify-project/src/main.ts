@@ -21,5 +21,6 @@ const app = createApp(App)
 registerPlugins(app)
 
 app.use(VueApexCharts);
+// Vue拡張機能
 app.config.devtools = true;
 app.mount('#app')
