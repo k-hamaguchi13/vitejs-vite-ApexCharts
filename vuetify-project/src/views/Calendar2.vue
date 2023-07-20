@@ -23,6 +23,7 @@
 
 <script>
 import isJapaneseHoliday  from "japanese-holidays";
+import * as holiday_jp from '@holiday-jp/holiday_jp';
 export default {
   data() {
     return {
@@ -31,7 +32,7 @@ export default {
   },
   computed: {
     calendar() {
-      const today = new Date();
+      const today = new Date(2023,8,1);
       const firstDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
       const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
       const startDate = new Date(firstDayOfMonth);
@@ -77,7 +78,7 @@ export default {
       if (!date) {
         return '';
       }
-      if (date.getDay() === 0 || isJapaneseHoliday.isHoliday(date)) {
+      if (date.getDay() === 0 || holiday_jp.isHoliday(date)) {
         return 'red';
       } else if (date.getDay() === 6) {
         return 'blue';
